@@ -1,0 +1,134 @@
+/* load font */
+@font-face {
+    font-family: 'castoro';
+    src: url('./Resources/Fonts/Castoro Titling/CastoroTitling-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'playfair';
+    src: url('./Resources/Fonts/Playfair/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+/* buat variable */
+:root{
+    --color1 : #fff7d4;
+    --color2 : #ffd95a;
+    --color3 : #c07f00;
+    --color4 : #4c3d3d;
+    --color5 : #9e8430;
+    --color6 : #000080;
+    --white : #f8f8f0;
+  }
+
+  /* animasi */
+@keyframes button-change {
+    from {background-color: var(--color4);color: var(--color2);}
+    to {background-color: var(--color3);color: var(--white);}
+}
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  * {
+    margin : 0;
+  }
+  
+  body {
+    margin:0;
+    padding:0;
+  }
+  
+/* general */
+
+  .content-container {
+    font-size: 1.3rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .content {
+    padding-top : 4rem;
+    padding-left : 4rem;
+    padding-right : 4rem;
+    padding-bottom: 4rem;
+    font-family: playfair;
+  }
+
+  .content-image img{
+    max-width:100%;
+    min-height:100%;
+    object-fit: cover;
+  }
+
+/* intro */
+
+  .content-container#intro {
+    background-color: var(--color4);
+    color: var(--white);
+  }
+  
+  .intro-header #logo {
+    max-width: 5rem;  
+    margin-bottom: 8rem;
+  }
+  .intro-header h1{
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    font-family: castoro;
+    font-weight: 150;
+  }
+  
+  .intro-header span {
+    color: var(--color2);
+    display: block;
+  }
+  
+  
+  .intro-header button {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: var(--color4);
+    border-radius: 20px;
+    border-color: #c07f00;
+    border-width: 10px;
+    color: var(--color2);
+    text-decoration: none;
+    padding: 15px;
+  }
+
+  .intro-header button:hover {
+    animation: button-change 0.2s;
+    background-color: var(--color3);
+    color: var(--white);
+  }
+
+  
+
+
+  /* deskripsi */
+  .content-container#description {
+    background-color: var(--color2);
+    color: var(--color6);
+    font-family: playfair;
+  }
+
+  #description h1{
+    font-size: 6rem;
+  }
+
+
+  /* coach */
+  .content-container#coach {
+    background-color: var(--color6);
+    color: var(--white);
+    font-family: playfair;
+  }
+  #coach .content-image img {
+    max-height: 100%;
+  }
